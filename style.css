@@ -2,12 +2,12 @@
     --marvel-red: #ED1D24;                    
     --card-bg: rgba(26, 26, 26, 0.75);        
     --card-border: rgba(255, 255, 255, 0.12); 
-    --card-hover-border: #ED1D24;             
+    --card-hover-border: #ED14D2;             
     --card-hover-glow: rgba(237, 29, 36, 0.3);
 
     /* Heroic Red / Gold / Navy Palette */
     --primary: #ff3b30;        /* heroic red */
-    --secondary: #ff9d00;      /* orange-gold */
+    --secondary:  #ED14D2;      /* orange-gold */
     --accent-blue: #1e3a8a;    /* deep navy blue */
     --accent-gold: #ffd60a;    /* bright gold */
     --accent-steel: #c7ced6;   /* steel / silver */
