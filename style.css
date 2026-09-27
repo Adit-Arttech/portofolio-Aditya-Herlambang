@@ -12,14 +12,14 @@
 
     /* System Palette Overrides */
     --primary: var(--marvel-red);       
-    --secondary: #990000;          /* Solid dark red replacement for neon orange-pink */
-    --accent-blue: #1E293B;        /* Muted Slate Navy */
+    --secondary: #990000;          
+    --accent-blue: #1E293B;        
     --accent-gold: var(--marvel-gold);    
-    --accent-steel: #94A3B8;       /* Cool Muted Steel */
+    --accent-steel: #94A3B8;       
 
     --bg-dark: #0A0A0C;            /* Matte Deep Charcoal Background */
-    --text-main: #F1F5F9;
-    --text-muted: #94A3B8;
+    --text-main: #F1F5F9;          /* Putih Terang Kontras */
+    --text-muted: #CBD5E1;         /* Abu-abu Terang Terbaca Jelas */
 }
 
 * {
@@ -64,7 +64,7 @@ h1, h2, h3, .section-title, .nav-logo {
     border-radius: 50%;
     filter: blur(140px);
     z-index: -1;
-    opacity: 0.15; /* Reduced intensity to eliminate neon effect */
+    opacity: 0.15;
     pointer-events: none;
     animation: floatGlow 12s ease-in-out infinite alternate;
 }
@@ -98,7 +98,7 @@ section {
     width: 100%;
     z-index: 100;
     padding: 18px 10%;
-    background: rgba(10, 10, 12, 0.85); /* Fixed solid dark background instead of bright red */
+    background: rgba(10, 10, 12, 0.85);
     border-bottom: 1px solid rgba(255, 255, 255, 0.05);
     backdrop-filter: blur(12px);
     transition: all 0.35s ease;
@@ -159,7 +159,7 @@ section {
     width: 0;
     height: 2px;
     border-radius: 2px;
-    background: var(--marvel-red); /* Solid red line replacing glowing gradient */
+    background: var(--marvel-red);
     transition: width 0.25s ease;
 }
 
@@ -179,7 +179,7 @@ section {
     font-size: 0.85rem;
     text-decoration: none;
     color: #FFFFFF;
-    background: var(--marvel-red); /* Solid Marvel Crimson */
+    background: var(--marvel-red);
     border: 1px solid rgba(255, 255, 255, 0.1);
     box-shadow: 0 4px 12px rgba(200, 16, 46, 0.2);
     transition: transform 0.25s ease, background 0.25s ease, box-shadow 0.25s ease;
@@ -256,6 +256,7 @@ section {
     margin-bottom: 8px;
 }
 
+/* GHOST TEXT : Diperbaiki agar terlihat & memberikan efek outline komik/marvel */
 .hero-ghost-text {
     position: absolute;
     top: 90px;
@@ -265,7 +266,8 @@ section {
     font-size: clamp(6rem, 13vw, 10.5rem);
     letter-spacing: 4px;
     line-height: 1;
-    color: rgba(255, 255, 255, 0.02);
+    color: rgba(255, 255, 255, 0.08); 
+    -webkit-text-stroke: 1px rgba(255, 255, 255, 0.15);
     z-index: 0;
     pointer-events: none;
     user-select: none;
@@ -274,7 +276,7 @@ section {
 .hero-breadcrumb {
     position: relative;
     z-index: 1;
-    font-size: 0.82rem;
+    font-size: 0.85rem;
     color: var(--text-muted);
     margin-bottom: 16px;
 }
@@ -378,21 +380,22 @@ section {
     clip-path: polygon(14% 0, 100% 0, 100% 100%, 0% 100%);
 }
 
+/* SLOT FOTO : Teks di dalamnya diperjelas */
 .hero-photo-slot {
     position: absolute;
     inset: 8% 8% 8% 20%;
     width: auto;
     height: auto;
     border-radius: 12px;
-    border: 1px dashed rgba(212, 175, 55, 0.3);
-    background: rgba(200, 16, 46, 0.03);
+    border: 1px dashed rgba(212, 175, 55, 0.5);
+    background: rgba(200, 16, 46, 0.05);
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     gap: 12px;
-    color: rgba(255, 255, 255, 0.3);
-    font-size: 0.85rem;
+    color: var(--text-main);
+    font-size: 0.9rem;
     font-weight: 600;
     object-fit: cover;
 }
@@ -608,7 +611,7 @@ section {
 
 .bento-preview {
     font-size: 5rem;
-    color: rgba(200, 16, 46, 0.1);
+    color: rgba(200, 16, 46, 0.15);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -694,9 +697,12 @@ footer {
     border-top: 1px solid rgba(255, 255, 255, 0.05);
 }
 
-/* Responsive Screen styles remain structural */
+/* =========================================================
+   Responsif Screen — Tablet (<=900px)
+   ========================================================= */
 @media (max-width: 900px) {
     section { padding: 50px 6%; }
+
     .navbar { padding: 14px 6%; }
     .navbar.scrolled { padding: 12px 6%; }
 
@@ -718,9 +724,13 @@ footer {
     }
 
     .nav-links.open { transform: translateX(0); }
+
     .nav-link { font-size: 1.05rem; }
+
     .nav-cta { display: none; }
+
     .nav-toggle { display: flex; }
+
     .hero-split { grid-template-columns: 1fr; min-height: auto; }
 
     .hero-split-left {
@@ -754,6 +764,9 @@ footer {
     .edu-card-genz { flex-direction: column; text-align: center; gap: 20px; }
 }
 
+/* =========================================================
+   Responsif Screen — Small phones (<=600px)
+   ========================================================= */
 @media (max-width: 600px) {
     section { padding: 45px 5.5%; }
     #home, .hero-split { padding-top: 0; }
@@ -778,6 +791,9 @@ footer {
     .contact-card-genz h2 { font-size: 1.5rem; }
 }
 
+/* =========================================================
+   Responsif Screen — Very small phones (<=380px)
+   ========================================================= */
 @media (max-width: 380px) {
     .hero-name { font-size: 1.85rem; }
     .hero-split-right { height: 220px; }
