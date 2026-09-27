@@ -211,34 +211,44 @@ section {
 .nav-toggle.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
 
 /* =========================================================
-   DECORATIVE HERO ICONS (original abstract shapes)
+   SLOT FOTO BACKGROUND (placeholder desain)
+   Ganti isi <div class="bg-photo-slot ..."> di index.html dengan
+   <img> kamu sendiri — frame, ukuran, dan posisi di bawah ini
+   akan otomatis membingkai foto apapun yang kamu taruh.
    ========================================================= */
-.hero-decal {
+.bg-photo-slot {
     position: fixed;
-    pointer-events: none;
     z-index: -1;
-    opacity: 0.16;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    border-radius: 20px;
+    border: 2px dashed rgba(255, 157, 0, 0.35);
+    background: rgba(255, 59, 48, 0.04);
+    color: rgba(255, 255, 255, 0.28);
+    font-size: 0.8rem;
+    font-weight: 600;
+    text-align: center;
+    object-fit: cover;
+    pointer-events: none;
 }
 
-.hero-decal-1 {
-    width: 260px;
-    height: 260px;
-    top: 12%;
-    right: 4%;
-    animation: decalSpin 40s linear infinite;
+.bg-photo-slot i { font-size: 1.8rem; color: rgba(255, 214, 10, 0.35); }
+
+.bg-photo-slot-1 {
+    width: 240px;
+    height: 240px;
+    top: 14%;
+    right: 5%;
 }
 
-.hero-decal-2 {
-    width: 200px;
-    height: 220px;
-    bottom: 6%;
-    left: 3%;
-    opacity: 0.12;
-}
-
-@keyframes decalSpin {
-    from { transform: rotate(0deg); }
-    to { transform: rotate(360deg); }
+.bg-photo-slot-2 {
+    width: 190px;
+    height: 240px;
+    bottom: 8%;
+    left: 4%;
 }
 
 #home {
@@ -928,8 +938,8 @@ footer {
 
     .nav-toggle { display: flex; }
 
-    .hero-decal-1 { width: 170px; height: 170px; top: 8%; right: -3%; opacity: 0.1; }
-    .hero-decal-2 { width: 130px; height: 145px; bottom: 3%; left: -3%; opacity: 0.08; }
+    .bg-photo-slot-1 { width: 150px; height: 150px; top: 8%; right: -4%; }
+    .bg-photo-slot-2 { width: 120px; height: 155px; bottom: 4%; left: -4%; }
 
     .hero-container { grid-template-columns: 1fr; text-align: center; gap: 40px; }
     .hero-text h1 { font-size: 2.8rem; }
