@@ -2,24 +2,26 @@
     /* Marvel Classic Matte & Deep Palette */
     --marvel-red: #C8102E;         /* Deep Marvel Crimson Red */
     --marvel-red-dark: #8B0000;    /* Dark Crimson for depth */
-    --marvel-gold: #D4AF37;       /* Vintage Metallic Gold */
+    --marvel-gold: #B8860B;       /* Gold Dibuat Lebih Gelap Agar Kontras di BG Putih */
     --marvel-navy: #0F172A;       /* Deep Cinematic Navy */
     
-    --card-bg: rgba(22, 22, 26, 0.85);        
-    --card-border: rgba(255, 255, 255, 0.08); 
+    /* Card & Border untuk Background Putih */
+    --card-bg: #FFFFFF;        
+    --card-border: rgba(0, 0, 0, 0.12); 
     --card-hover-border: var(--marvel-red);             
-    --card-hover-glow: rgba(200, 16, 46, 0.15);
+    --card-hover-glow: rgba(200, 16, 46, 0.12);
 
     /* System Palette Overrides */
     --primary: var(--marvel-red);       
     --secondary: #990000;          
     --accent-blue: #1E293B;        
     --accent-gold: var(--marvel-gold);    
-    --accent-steel: #94A3B8;       
+    --accent-steel: #475569;       
 
-    --bg-dark: #0A0A0C;            /* Matte Deep Charcoal Background */
-    --text-main: #F1F5F9;          /* Putih Terang Kontras */
-    --text-muted: #CBD5E1;         /* Abu-abu Terang Terbaca Jelas */
+    /* UBAH VARIABEL BG & TEKS UNTUK TEMA PUTIH/TERANG */
+    --bg-dark: #F8FAFC;            /* Latar Belakang Putih Bersih / Off-White */
+    --text-main: #0F172A;          /* Teks Utama Hitam-Gelap Kontras Tinggi */
+    --text-muted: #475569;         /* Teks Deskripsi Abu-abu Gelap Terbaca Jelas */
 }
 
 * {
@@ -46,7 +48,7 @@ h1, h2, h3, .section-title, .nav-logo {
     letter-spacing: 0.5px;
 }
 
-/* Background Blobs (Muted Cinematic Ambient Glow) */
+/* Background Blobs (Disesuaikan Opacity-nya untuk BG Putih) */
 #particles-js {
     position: fixed;
     width: 100%;
@@ -64,14 +66,14 @@ h1, h2, h3, .section-title, .nav-logo {
     border-radius: 50%;
     filter: blur(140px);
     z-index: -1;
-    opacity: 0.15;
+    opacity: 0.08;
     pointer-events: none;
     animation: floatGlow 12s ease-in-out infinite alternate;
 }
 
 .blob-1 { background: var(--marvel-navy); top: -10%; left: -10%; }
 .blob-2 { background: var(--marvel-red); bottom: -10%; right: -10%; animation-delay: -3s; }
-.blob-3 { background: var(--marvel-gold); top: 50%; left: 40%; width: 350px; height: 350px; opacity: 0.08; animation-delay: -6s; }
+.blob-3 { background: var(--marvel-gold); top: 50%; left: 40%; width: 350px; height: 350px; opacity: 0.05; animation-delay: -6s; }
 
 @keyframes floatGlow {
     0% { transform: translate(0, 0) scale(1); }
@@ -81,7 +83,7 @@ h1, h2, h3, .section-title, .nav-logo {
 /* Custom Scrollbar */
 ::-webkit-scrollbar { width: 7px; }
 ::-webkit-scrollbar-track { background: var(--bg-dark); }
-::-webkit-scrollbar-thumb { background: #1E1E24; border-radius: 10px; }
+::-webkit-scrollbar-thumb { background: #CBD5E1; border-radius: 10px; }
 ::-webkit-scrollbar-thumb:hover { background: var(--marvel-red); }
 
 section {
@@ -89,7 +91,7 @@ section {
 }
 
 /* =========================================================
-   NAVBAR
+   NAVBAR (Untuk BG Putih)
    ========================================================= */
 .navbar {
     position: fixed;
@@ -98,18 +100,18 @@ section {
     width: 100%;
     z-index: 100;
     padding: 18px 10%;
-    background: rgba(10, 10, 12, 0.85);
-    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    background: rgba(255, 255, 255, 0.88);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.08);
     backdrop-filter: blur(12px);
     transition: all 0.35s ease;
 }
 
 .navbar.scrolled {
     padding: 14px 10%;
-    background: rgba(10, 10, 12, 0.95);
+    background: rgba(255, 255, 255, 0.96);
     border-bottom: 1px solid rgba(200, 16, 46, 0.3);
     backdrop-filter: blur(16px);
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.6);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
 }
 
 .nav-container {
@@ -180,7 +182,7 @@ section {
     text-decoration: none;
     color: #FFFFFF;
     background: var(--marvel-red);
-    border: 1px solid rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(0, 0, 0, 0.1);
     box-shadow: 0 4px 12px rgba(200, 16, 46, 0.2);
     transition: transform 0.25s ease, background 0.25s ease, box-shadow 0.25s ease;
 }
@@ -200,7 +202,7 @@ section {
     width: 42px;
     height: 42px;
     border-radius: 10px;
-    background: rgba(255, 255, 255, 0.05);
+    background: rgba(0, 0, 0, 0.05);
     border: 1px solid var(--card-border);
     cursor: pointer;
     flex-shrink: 0;
@@ -256,7 +258,7 @@ section {
     margin-bottom: 8px;
 }
 
-/* GHOST TEXT : Diperbaiki agar terlihat & memberikan efek outline komik/marvel */
+/* GHOST TEXT : Diperbarui agar berupa outline samar di background putih */
 .hero-ghost-text {
     position: absolute;
     top: 90px;
@@ -266,8 +268,8 @@ section {
     font-size: clamp(6rem, 13vw, 10.5rem);
     letter-spacing: 4px;
     line-height: 1;
-    color: rgba(255, 255, 255, 0.08); 
-    -webkit-text-stroke: 1px rgba(255, 255, 255, 0.15);
+    color: rgba(0, 0, 0, 0.03); 
+    -webkit-text-stroke: 1px rgba(0, 0, 0, 0.08);
     z-index: 0;
     pointer-events: none;
     user-select: none;
@@ -322,7 +324,7 @@ section {
     width: 42px;
     height: 42px;
     border-radius: 8px;
-    background: rgba(255, 255, 255, 0.03);
+    background: #FFFFFF;
     border: 1px solid var(--card-border);
     display: flex;
     align-items: center;
@@ -330,11 +332,12 @@ section {
     color: var(--text-main);
     font-size: 1.05rem;
     text-decoration: none;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
     transition: all 0.25s ease;
 }
 
 .hero-social a:hover {
-    background: rgba(200, 16, 46, 0.15);
+    background: rgba(200, 16, 46, 0.08);
     color: var(--marvel-red);
     border-color: var(--marvel-red);
     transform: translateY(-3px);
@@ -365,7 +368,7 @@ section {
 }
 
 .hero-nav-next {
-    background: rgba(255, 255, 255, 0.05);
+    background: #FFFFFF;
     color: var(--text-main);
     border: 1px solid var(--card-border);
 }
@@ -375,20 +378,20 @@ section {
 .hero-split-right {
     position: relative;
     overflow: hidden;
-    background: #0E0E12;
+    background: #F1F5F9;
     border-left: 1px solid var(--card-border);
     clip-path: polygon(14% 0, 100% 0, 100% 100%, 0% 100%);
 }
 
-/* SLOT FOTO : Teks di dalamnya diperjelas */
+/* SLOT FOTO : Teks Gelap Terbaca di BG Putih */
 .hero-photo-slot {
     position: absolute;
     inset: 8% 8% 8% 20%;
     width: auto;
     height: auto;
     border-radius: 12px;
-    border: 1px dashed rgba(212, 175, 55, 0.5);
-    background: rgba(200, 16, 46, 0.05);
+    border: 1px dashed rgba(200, 16, 46, 0.4);
+    background: rgba(255, 255, 255, 0.8);
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -398,9 +401,10 @@ section {
     font-size: 0.9rem;
     font-weight: 600;
     object-fit: cover;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.05);
 }
 
-.hero-photo-slot i { font-size: 2.3rem; color: var(--marvel-gold); }
+.hero-photo-slot i { font-size: 2.3rem; color: var(--marvel-red); }
 
 .hero-side-strip {
     position: absolute;
@@ -408,7 +412,7 @@ section {
     right: 0;
     bottom: 0;
     width: 44px;
-    background: #14141A;
+    background: #E2E8F0;
     border-left: 1px solid var(--card-border);
     display: flex;
     flex-direction: column;
@@ -421,7 +425,7 @@ section {
     width: 16px;
     height: 4px;
     border-radius: 2px;
-    background: rgba(255, 255, 255, 0.15);
+    background: rgba(0, 0, 0, 0.15);
 }
 
 .hero-side-strip span.active {
@@ -464,6 +468,7 @@ section {
     text-align: center;
     letter-spacing: 0.5px;
     text-transform: uppercase;
+    color: var(--text-main);
 }
 
 .section-subtitle {
@@ -477,7 +482,7 @@ section {
 }
 
 /* ==========================================================================
-   SENJATA DESAIN & CODING (ARSENAL CARDS)
+   ARSENAL CARDS
    ========================================================================== */
 .arsenal-grid {
     display: grid;
@@ -492,13 +497,13 @@ section {
     border: 1px solid var(--card-border);
     border-radius: 12px;
     padding: 28px;
-    backdrop-filter: blur(14px);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.03);
     transition: all 0.3s ease;
 }
 
 .arsenal-card:hover {
     border-color: var(--marvel-red);
-    box-shadow: 0 10px 24px rgba(0, 0, 0, 0.6), 0 0 12px rgba(200, 16, 46, 0.15);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08), 0 0 12px rgba(200, 16, 46, 0.1);
 }
 
 .arsenal-header {
@@ -520,15 +525,16 @@ section {
 }
 
 .icon-html { background: rgba(228, 77, 38, 0.1); color: #e44d26; border: 1px solid rgba(228, 77, 38, 0.2); }
-.icon-js { background: rgba(247, 223, 30, 0.1); color: #f7df1e; border: 1px solid rgba(247, 223, 30, 0.2); }
-.icon-php { background: rgba(119, 123, 179, 0.1); color: #8892bf; border: 1px solid rgba(119, 123, 179, 0.2); }
+.icon-js { background: rgba(247, 223, 30, 0.15); color: #d4ac0d; border: 1px solid rgba(247, 223, 30, 0.3); }
+.icon-php { background: rgba(119, 123, 179, 0.1); color: #5c6299; border: 1px solid rgba(119, 123, 179, 0.2); }
 .icon-figma { background: rgba(242, 78, 30, 0.1); color: #f24e1e; border: 1px solid rgba(242, 78, 30, 0.2); }
-.icon-drawio { background: rgba(212, 175, 55, 0.1); color: var(--marvel-gold); border: 1px solid rgba(212, 175, 55, 0.2); }
+.icon-drawio { background: rgba(184, 134, 11, 0.1); color: var(--marvel-gold); border: 1px solid rgba(184, 134, 11, 0.2); }
 .icon-vscode { background: rgba(0, 122, 204, 0.1); color: #007acc; border: 1px solid rgba(0, 122, 204, 0.2); }
 
 .arsenal-header h3 {
     font-size: 1.15rem;
     font-weight: 700;
+    color: var(--text-main);
 }
 
 .arsenal-card p {
@@ -552,7 +558,7 @@ section {
     border: 1px solid var(--card-border);
     border-radius: 12px;
     padding: 30px;
-    backdrop-filter: blur(12px);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.03);
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -563,7 +569,7 @@ section {
 
 .bento-item:hover {
     border-color: var(--marvel-red);
-    box-shadow: 0 12px 28px rgba(0, 0, 0, 0.6), 0 0 12px rgba(200, 16, 46, 0.15);
+    box-shadow: 0 12px 28px rgba(0, 0, 0, 0.08), 0 0 12px rgba(200, 16, 46, 0.1);
 }
 
 .bento-large { grid-column: span 2; min-height: 280px; flex-direction: row; align-items: center; }
@@ -577,30 +583,31 @@ section {
     text-transform: uppercase;
     letter-spacing: 1px;
     color: var(--marvel-red);
-    background: rgba(200, 16, 46, 0.1);
+    background: rgba(200, 16, 46, 0.08);
     padding: 4px 10px;
     border-radius: 4px;
     margin-bottom: 12px;
 }
 
-.bento-content h3 { font-size: 1.35rem; margin-bottom: 10px; font-weight: 700; }
+.bento-content h3 { font-size: 1.35rem; margin-bottom: 10px; font-weight: 700; color: var(--text-main); }
 .bento-content p { color: var(--text-muted); font-size: 0.9rem; line-height: 1.55; margin-bottom: 18px; }
 
 .bento-tech { display: flex; gap: 8px; margin-bottom: 20px; flex-wrap: wrap; }
 .bento-tech span {
     font-size: 0.75rem;
-    background: rgba(255, 255, 255, 0.04);
-    border: 1px solid rgba(255, 255, 255, 0.05);
+    background: #F1F5F9;
+    border: 1px solid rgba(0, 0, 0, 0.06);
     padding: 3px 10px;
     border-radius: 4px;
     color: var(--text-muted);
+    font-weight: 600;
 }
 
 .bento-link {
     display: inline-flex;
     align-items: center;
     gap: 8px;
-    color: var(--marvel-gold);
+    color: var(--marvel-red);
     font-weight: 700;
     font-size: 0.9rem;
     text-decoration: none;
@@ -611,7 +618,7 @@ section {
 
 .bento-preview {
     font-size: 5rem;
-    color: rgba(200, 16, 46, 0.15);
+    color: rgba(200, 16, 46, 0.1);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -621,7 +628,7 @@ section {
 /* Website preview pada Featured Web Works */
 .project-card { padding: 24px; }
 .project-card .bento-content { position: relative; z-index: 2; flex: 1; min-width: 0; }
-.project-preview { display:block; position:relative; width:240px; height:180px; flex-shrink:0; margin-left:20px; border-radius:8px; overflow:hidden; border:1px solid rgba(255,255,255,0.08); background:#0A0A0C; box-shadow:0 8px 20px rgba(0,0,0,.5); text-decoration:none; }
+.project-preview { display:block; position:relative; width:240px; height:180px; flex-shrink:0; margin-left:20px; border-radius:8px; overflow:hidden; border:1px solid rgba(0,0,0,0.1); background:#FFFFFF; box-shadow:0 8px 20px rgba(0,0,0,.08); text-decoration:none; }
 .project-preview iframe { width:238%; height:238%; border:0; pointer-events:none; transform:scale(.42); transform-origin:top left; background:#fff; }
 .preview-overlay { position:absolute; inset:0; display:flex; align-items:center; justify-content:center; background:rgba(0,0,0,0); color:#fff; font-size:1.5rem; transition:.25s ease; }
 .project-preview:hover .preview-overlay { background:rgba(200,16,46,.2); }
@@ -640,7 +647,7 @@ section {
     display: flex;
     gap: 30px;
     align-items: center;
-    backdrop-filter: blur(12px);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.03);
     transition: border-color 0.3s ease;
 }
 
@@ -653,7 +660,7 @@ section {
     height: 75px;
     border-radius: 12px;
     background: rgba(200, 16, 46, 0.08);
-    border: 1px solid rgba(212, 175, 55, 0.25);
+    border: 1px solid rgba(184, 134, 11, 0.25);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -670,7 +677,7 @@ section {
     letter-spacing: 1px;
 }
 
-.edu-details h3 { font-size: 1.4rem; margin: 4px 0; }
+.edu-details h3 { font-size: 1.4rem; margin: 4px 0; color: var(--text-main); }
 .edu-major { color: var(--marvel-gold); font-weight: 600; font-size: 0.95rem; margin-bottom: 10px; }
 .edu-desc { color: var(--text-muted); font-size: 0.9rem; line-height: 1.6; }
 
@@ -679,14 +686,14 @@ section {
     max-width: 700px;
     margin: 0 auto;
     text-align: center;
-    background: #121217;
+    background: #FFFFFF;
     border: 1px solid rgba(200, 16, 46, 0.3);
     border-radius: 16px;
     padding: 50px 30px;
-    backdrop-filter: blur(14px);
+    box-shadow: 0 10px 30px rgba(200, 16, 46, 0.08);
 }
 
-.contact-card-genz h2 { font-size: 2rem; margin-bottom: 12px; }
+.contact-card-genz h2 { font-size: 2rem; margin-bottom: 12px; color: var(--text-main); }
 .contact-card-genz p { color: var(--text-muted); margin-bottom: 28px; font-size: 1rem; }
 
 footer {
@@ -694,7 +701,7 @@ footer {
     padding: 35px;
     color: var(--text-muted);
     font-size: 0.85rem;
-    border-top: 1px solid rgba(255, 255, 255, 0.05);
+    border-top: 1px solid rgba(0, 0, 0, 0.08);
 }
 
 /* =========================================================
@@ -716,9 +723,10 @@ footer {
         flex-direction: column;
         justify-content: center;
         gap: 28px;
-        background: rgba(14, 14, 18, 0.98);
+        background: rgba(255, 255, 255, 0.98);
         backdrop-filter: blur(18px);
-        border-left: 1px solid rgba(200, 16, 46, 0.2);
+        border-left: 1px solid rgba(0, 0, 0, 0.1);
+        box-shadow: -10px 0 30px rgba(0,0,0,0.1);
         transform: translateX(100%);
         transition: transform 0.35s ease;
     }
