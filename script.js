@@ -124,17 +124,17 @@ document.addEventListener("DOMContentLoaded", function () {
                 },
 
                 opacity: {
-                    value: 0.25,
+                    value: 0.18,
                     random: true
                 },
 
                 size: {
-                    value: 3,
+                    value: 2.2,
                     random: true
                 },
 
                 line_linked: {
-                    enable: true,
+                    enable: false,
                     distance: 150,
                     color: "#1e3a8a",
                     opacity: 0.15,
@@ -143,7 +143,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
                 move: {
                     enable: true,
-                    speed: 1.2,
+                    speed: 0.5,
                     direction: "none",
                     random: true,
                     straight: false,
@@ -158,12 +158,12 @@ document.addEventListener("DOMContentLoaded", function () {
                 events: {
 
                     onhover: {
-                        enable: true,
+                        enable: false,
                         mode: "grab"
                     },
 
                     onclick: {
-                        enable: true,
+                        enable: false,
                         mode: "push"
                     }
                 },
