@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Aditya Herlambang | Web Developer & UI Specialist</title>
     <!-- Google Fonts & FontAwesome -->
-    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&family=Syne:wght@700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Oswald:wght@500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <!-- AOS Animation Library -->
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
@@ -41,86 +41,46 @@
     <div class="blob blob-2"></div>
     <div class="blob blob-3"></div>
 
-    <!--
-        SLOT FOTO BACKGROUND
-        Ini cuma placeholder desain. Kalau mau pasang foto sendiri nanti,
-        ganti <div class="bg-photo-slot ..."> di bawah ini dengan:
-        <img class="bg-photo-slot bg-photo-slot-1" src="nama-file-kamu.jpg" alt="...">
-        Posisi & ukuran framenya sudah diatur di style.css (.bg-photo-slot),
-        jadi foto apapun yang kamu taruh akan otomatis pas di frame itu.
-    -->
-    <div class="bg-photo-slot bg-photo-slot-1" aria-hidden="true">
-        <i class="fa-regular fa-image"></i>
-        <span>Taruh foto di sini</span>
-    </div>
-    <div class="bg-photo-slot bg-photo-slot-2" aria-hidden="true">
-        <i class="fa-regular fa-image"></i>
-        <span>Taruh foto di sini</span>
-    </div>
-
     <!-- Hero Section -->
-    <section id="home">
-        <div class="hero-container">
-            <div class="hero-text" data-aos="fade-right">
-                <div class="status-badge">
-                    <span class="pulse-dot"></span> Available for Web Projects
-                </div>
-                <h1>Aditya <br><span class="gradient-text">Herlambang</span></h1>
-                <h2>Web Developer & UI Specialist</h2>
-                <p>Fokus membangun pengalaman web interaktif, responsif, dan bernilai estetika tinggi dengan kombinasi penulisan kode yang bersih serta visual antarmuka modern.</p>
-                
-                <div class="btn-group">
-                    <a href="https://wa.me/6283105716295?text=Halo%20Aditya,%20saya%20tertarik%20untuk%20diskusi%20proyek%20web." target="_blank" class="action-btn primary-btn">
-                        Let's Talk <i class="fa-solid fa-arrow-up-right-from-square"></i>
-                    </a>
-                    <a href="mailto:adityaherlambang1212@gmail.com" class="action-btn secondary-btn">
-                        Email Me <i class="fa-solid fa-envelope"></i>
-                    </a>
-                    
-                    <div class="social-icons">
-                        <a href="https://www.linkedin.com/in/aditya-herlambang-93b4b1413?trk=contact-info" target="_blank" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
-                        <a href="https://www.instagram.com/adityaherlambang_12?igsh=MTI5bDAxbjFubHU1Yw==" target="_blank" title="Instagram"><i class="fab fa-instagram"></i></a>
-                    </div>
-                </div>
-            </div>
-            
-            <!-- ID Card Realistis: Lanyard + Clip + Interactive Physics -->
-            <div class="profile-wrapper" data-aos="fade-left">
-                <div class="id-card-holder" id="idCardHolder">
-                    <div class="lanyard-rig" aria-hidden="true">
-                        <div class="lanyard-neck"></div>
-                        <div class="lanyard-left"></div>
-                        <div class="lanyard-right"></div>
-                        <div class="lanyard-knot"></div>
-                        <div class="lanyard-ring"></div>
-                    </div>
+    <section id="home" class="hero-split">
+        <div class="hero-split-left" data-aos="fade-right">
+            <span class="hero-eyebrow">Portfolio</span>
+            <h1 class="hero-ghost-text" aria-hidden="true">DEV</h1>
 
-                    <div class="id-card-assembly" id="idCardAssembly">
-                        <div class="id-card-clip">
-                            <span class="clip-slot"></span>
-                            <span class="clip-highlight"></span>
-                        </div>
-                        <div class="card-connector"></div>
-                        <div class="id-card-body">
-                            <div class="card-edge"></div>
-                            <div class="card-shine" aria-hidden="true"></div>
-                            <div class="card-chip" aria-hidden="true"><i class="fa-solid fa-microchip"></i></div>
-                            <div class="card-logo">AH<span>•</span></div>
-                            <div class="id-card-photo">
-                                <img src="rame.png" alt="Aditya Herlambang" onerror="this.style.display='none'; this.parentNode.innerHTML='&lt;i class=\"fa-solid fa-code\" style=\"font-size:3.5rem; color:var(--primary)\"&gt;&lt;/i&gt;';">
-                            </div>
-                            <div class="id-card-details">
-                                <h3>Aditya Herlambang</h3>
-                                <p>Web Developer &amp; UI/UX</p>
-                                <div class="card-meta">
-                                    <span class="id-badge"><i class="fa-solid fa-circle-check"></i> DEV // 2026</span>
-                                    <span class="card-code">ID • 001</span>
-                                </div>
-                            </div>
-                            <div class="card-bottom-line"><span></span><span></span><span></span></div>
-                        </div>
-                    </div>
-                </div>
+            <div class="hero-breadcrumb">Home <span>/</span> Profile</div>
+            <h2 class="hero-name">Aditya<br>Herlambang</h2>
+
+            <div class="hero-desc">
+                <p>Lulusan SMK RPL yang senang membangun antarmuka web yang rapi dan fungsional.</p>
+                <p>Terbiasa merancang tampilan sekaligus menulis kode dari awal sampai jadi.</p>
+                <p>Siap berkontribusi sebagai IT Support maupun Web Developer.</p>
+            </div>
+
+            <div class="hero-social">
+                <a href="https://www.linkedin.com/in/aditya-herlambang-93b4b1413?trk=contact-info" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                <a href="https://www.instagram.com/adityaherlambang_12?igsh=MTI5bDAxbjFubHU1Yw==" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                <a href="mailto:adityaherlambang1212@gmail.com" aria-label="Email"><i class="fa-solid fa-envelope"></i></a>
+                <a href="https://wa.me/6283105716295?text=Halo%20Aditya,%20saya%20tertarik%20untuk%20diskusi%20proyek%20web." target="_blank" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+            </div>
+
+            <div class="hero-nav-btns">
+                <a href="#home" class="hero-nav-btn hero-nav-prev" aria-label="Kembali ke atas"><i class="fa-solid fa-arrow-left"></i></a>
+                <a href="#projects" class="hero-nav-btn hero-nav-next" aria-label="Lihat proyek"><i class="fa-solid fa-arrow-right"></i></a>
+            </div>
+        </div>
+
+        <div class="hero-split-right" data-aos="fade-left">
+            <!--
+                Ganti div di bawah ini dengan foto kamu:
+                <img class="hero-photo-slot" src="nama-foto.jpg" alt="Aditya Herlambang">
+            -->
+            <div class="hero-photo-slot" aria-hidden="true">
+                <i class="fa-regular fa-image"></i>
+                <span>Taruh foto di sini</span>
+            </div>
+
+            <div class="hero-side-strip" aria-hidden="true">
+                <span></span><span></span><span class="active"></span><span></span>
             </div>
         </div>
     </section>
