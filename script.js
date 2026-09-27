@@ -57,7 +57,7 @@ document.addEventListener("DOMContentLoaded", function () {
                 },
 
                 color: {
-                    value: "#00f2fe"
+                    value: "#ff3b30"
                 },
 
                 shape: {
@@ -77,7 +77,7 @@ document.addEventListener("DOMContentLoaded", function () {
                 line_linked: {
                     enable: true,
                     distance: 150,
-                    color: "#7000ff",
+                    color: "#1e3a8a",
                     opacity: 0.15,
                     width: 1
                 },
