@@ -998,6 +998,10 @@ section {
 .hero-photo-slot span {
 
     font-size: .8rem;
+
+    color: var(--text-muted);
+
+    text-align: center;
 }
 
 
@@ -1005,140 +1009,123 @@ section {
 
     position: absolute;
 
-    right: 45px;
+    right: 30px;
+
+    top: 50%;
+
+    transform: translateY(-50%);
 
     display: flex;
 
     flex-direction: column;
 
-    gap: 8px;
+    gap: 12px;
+
+    z-index: 3;
 }
 
 
 .hero-side-strip span {
 
-    width: 4px;
+    width: 8px;
 
-    height: 30px;
+    height: 8px;
 
-    background:
-        rgba(255,255,255,.15);
+    border-radius: 50%;
+
+    background: rgba(230,36,41,.25);
+
+    transition: .3s ease;
+
+    cursor: pointer;
 }
 
 
 .hero-side-strip span.active {
 
-    height: 65px;
+    background: var(--primary);
 
-    background:
-        var(--primary);
-
-    box-shadow:
-        0 0 12px
-        rgba(230,36,41,.25);
+    box-shadow: 0 0 12px rgba(230,36,41,.40);
 }
 
 
 /* =========================================================
-   SECTION TITLE
+   ARSENAL SECTION
    ========================================================= */
 
 .section-title {
 
-    font-size:
-        clamp(
-            2rem,
-            4vw,
-            3rem
-        );
+    font-size: clamp(2rem, 4vw, 3.2rem);
+
+    text-align: center;
+
+    margin-bottom: 20px;
 
     text-transform: uppercase;
 
-    margin-bottom: 12px;
-}
-
-
-.section-title::after {
-
-    content: '';
-
-    display: block;
-
-    width: 50px;
-
-    height: 4px;
-
-    margin-top: 14px;
-
-    background:
-        var(--primary);
+    letter-spacing: 2px;
 }
 
 
 .section-subtitle {
 
-    max-width: 750px;
+    text-align: center;
 
-    color:
-        var(--text-muted);
+    color: var(--text-muted);
 
-    font-size: .9rem;
+    font-size: clamp(0.9rem, 2vw, 1rem);
 
-    line-height: 1.7;
+    margin-bottom: 50px;
 
-    margin-bottom: 45px;
+    max-width: 800px;
+
+    margin-left: auto;
+
+    margin-right: auto;
 }
 
-
-/* =========================================================
-   ARSENAL
-   ========================================================= */
 
 .arsenal-grid {
 
     display: grid;
 
-    grid-template-columns:
-        repeat(3,1fr);
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
 
-    gap: 18px;
+    gap: 24px;
+
+    max-width: 1200px;
+
+    margin: 0 auto;
 }
 
 
 .arsenal-card {
 
-    padding: 30px;
+    padding: 28px;
 
-    background:
-        var(--card-bg);
+    background: var(--card-bg);
 
-    border:
-        1px solid var(--card-border);
+    border: 1px solid var(--card-border);
 
-    border-radius: 18px;
+    border-radius: 16px;
 
-    backdrop-filter:
-        blur(15px);
+    transition: all .35s ease;
 
-    transition:
-        .35s ease;
+    cursor: pointer;
+
+    backdrop-filter: blur(10px);
 }
 
 
 .arsenal-card:hover {
 
-    transform:
-        translateY(-7px);
+    background: rgba(15, 20, 32, 0.85);
 
-    border-color:
-        var(--card-hover-border);
+    border-color: var(--card-hover-border);
 
-    box-shadow:
-        0 20px 40px
-        rgba(0,0,0,.35),
+    box-shadow: 0 8px 32px rgba(230,36,41,.15);
 
-        0 0 20px
-        rgba(230,36,41,.05);
+    transform: translateY(-5px);
 }
 
 
@@ -1146,19 +1133,19 @@ section {
 
     display: flex;
 
-    align-items: center;
+    align-items: flex-start;
 
-    gap: 15px;
+    gap: 16px;
 
-    margin-bottom: 18px;
+    margin-bottom: 16px;
 }
 
 
 .arsenal-icon {
 
-    width: 50px;
+    width: 56px;
 
-    height: 50px;
+    height: 56px;
 
     display: flex;
 
@@ -1166,129 +1153,95 @@ section {
 
     justify-content: center;
 
-    border-radius: 13px;
+    border-radius: 12px;
 
-    font-size: 1.4rem;
+    font-size: 1.8rem;
+
+    flex-shrink: 0;
 }
 
-
-.arsenal-header h3 {
-
-    font-size: 1rem;
-}
-
-
-.arsenal-card p {
-
-    color:
-        var(--text-muted);
-
-    font-size: .83rem;
-
-    line-height: 1.7;
-}
-
-
-/* =========================================================
-   TECH ICONS
-   ========================================================= */
 
 .icon-html {
 
-    background:
-        rgba(228,77,38,.10);
+    background: rgba(240, 101, 41, 0.1);
 
-    color:
-        #E44D26;
-
-    border:
-        1px solid
-        rgba(228,77,38,.20);
+    color: #F06529;
 }
 
 
 .icon-js {
 
-    background:
-        rgba(247,223,30,.06);
+    background: rgba(240, 219, 79, 0.1);
 
-    color:
-        #F7DF1E;
-
-    border:
-        1px solid
-        rgba(247,223,30,.15);
+    color: #F0DB4F;
 }
 
 
 .icon-php {
 
-    background:
-        rgba(119,123,179,.10);
+    background: rgba(119, 123, 180, 0.1);
 
-    color:
-        #A8ACD8;
-
-    border:
-        1px solid
-        rgba(119,123,179,.20);
+    color: #777BB4;
 }
 
 
 .icon-figma {
 
-    background:
-        rgba(242,78,30,.10);
+    background: rgba(162, 85, 247, 0.1);
 
-    color:
-        #F24E1E;
-
-    border:
-        1px solid
-        rgba(242,78,30,.20);
+    color: #A255F7;
 }
 
 
 .icon-drawio {
 
-    background:
-        rgba(36,59,107,.16);
+    background: rgba(255, 102, 0, 0.1);
 
-    color:
-        #8EA7D9;
-
-    border:
-        1px solid
-        rgba(36,59,107,.30);
+    color: #FF6600;
 }
 
 
 .icon-vscode {
 
-    background:
-        rgba(0,122,204,.10);
+    background: rgba(0, 173, 239, 0.1);
 
-    color:
-        #4EA8E8;
+    color: #00ADEF;
+}
 
-    border:
-        1px solid
-        rgba(0,122,204,.20);
+
+.arsenal-header h3 {
+
+    font-size: 1.2rem;
+
+    color: var(--text-main);
+}
+
+
+.arsenal-card p {
+
+    color: var(--text-muted);
+
+    line-height: 1.6;
+
+    font-size: 0.95rem;
 }
 
 
 /* =========================================================
-   PROJECTS
+   BENTO GRID
    ========================================================= */
 
 .bento-grid {
 
     display: grid;
 
-    grid-template-columns:
-        repeat(2,1fr);
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
 
     gap: 20px;
+
+    max-width: 1200px;
+
+    margin: 0 auto;
 }
 
 
@@ -1296,58 +1249,65 @@ section {
 
     position: relative;
 
-    display: flex;
+    min-height: 300px;
 
-    gap: 25px;
-
-    min-height: 320px;
-
-    padding: 28px;
-
-    background:
-        var(--card-bg);
-
-    border:
-        1px solid var(--card-border);
-
-    border-radius: 22px;
+    border-radius: 16px;
 
     overflow: hidden;
 
-    backdrop-filter:
-        blur(15px);
+    background: var(--card-bg);
 
-    transition:
-        .35s ease;
-}
+    border: 1px solid var(--card-border);
 
+    transition: all .35s ease;
 
-.bento-item:hover {
-
-    border-color:
-        var(--card-hover-border);
-
-    box-shadow:
-        0 20px 45px
-        rgba(0,0,0,.45),
-
-        0 0 20px
-        rgba(230,36,41,.05);
+    cursor: pointer;
 }
 
 
 .bento-large {
 
-    grid-column:
-        span 2;
+    grid-column: span 2;
+
+    min-height: 350px;
+}
+
+
+.bento-medium {
+
+    grid-column: span 1;
+
+    min-height: 300px;
+}
+
+
+.bento-small {
+
+    grid-column: span 1;
+
+    min-height: 280px;
 }
 
 
 .bento-content {
 
-    flex: 1;
+    position: relative;
 
-    min-width: 0;
+    z-index: 2;
+
+    padding: 28px;
+
+    height: 100%;
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: flex-end;
+
+    background: linear-gradient(135deg, 
+        rgba(15, 20, 32, 0.4), 
+        rgba(15, 20, 32, 0.8));
 }
 
 
@@ -1355,194 +1315,89 @@ section {
 
     display: inline-block;
 
-    color:
-        var(--primary);
+    font-size: 0.75rem;
 
-    background:
-        rgba(230,36,41,.08);
+    font-weight: 700;
 
-    border:
-        1px solid
-        rgba(230,36,41,.12);
-
-    padding:
-        6px 10px;
-
-    border-radius: 5px;
-
-    font-size: .65rem;
-
-    font-weight: 800;
+    color: var(--primary);
 
     text-transform: uppercase;
 
-    letter-spacing: .5px;
-
-    margin-bottom: 15px;
-}
-
-
-.bento-content h3 {
-
-    font-size: 1.45rem;
+    letter-spacing: 1px;
 
     margin-bottom: 12px;
 }
 
 
-.bento-content p {
+.bento-item h3 {
 
-    color:
-        var(--text-muted);
+    font-size: 1.5rem;
 
-    font-size: .82rem;
+    margin-bottom: 10px;
 
-    line-height: 1.7;
-
-    margin-bottom: 18px;
+    color: var(--text-main);
 }
 
 
-.bento-tech {
+.bento-item p {
 
-    display: flex;
+    font-size: 0.9rem;
 
-    flex-wrap: wrap;
+    color: var(--text-muted);
 
-    gap: 7px;
+    line-height: 1.5;
 
-    margin-bottom: 20px;
+    margin-bottom: 16px;
 }
 
 
-.bento-tech span {
+.bento-item:hover {
 
-    padding:
-        5px 8px;
+    border-color: var(--card-hover-border);
 
-    background:
-        rgba(255,255,255,.035);
+    box-shadow: 0 10px 40px rgba(230,36,41,.2);
 
-    border:
-        1px solid
-        var(--card-border);
-
-    border-radius: 5px;
-
-    color:
-        var(--accent-steel);
-
-    font-size: .65rem;
-}
-
-
-.bento-link {
-
-    display: inline-flex;
-
-    align-items: center;
-
-    gap: 8px;
-
-    color:
-        var(--primary);
-
-    font-size: .75rem;
-
-    font-weight: 700;
-
-    transition:
-        .3s ease;
-}
-
-
-.bento-link:hover {
-
-    color:
-        var(--primary-light);
+    transform: translateY(-5px);
 }
 
 
 .project-preview {
 
-    position: relative;
+    display: inline-block;
 
-    display: block;
+    padding: 10px 20px;
 
-    width: 42%;
+    background: var(--primary);
 
-    min-width: 260px;
+    color: white;
 
-    border-radius: 14px;
+    border-radius: 8px;
 
-    overflow: hidden;
+    font-weight: 600;
 
-    border:
-        1px solid
-        rgba(230,36,41,.25);
+    font-size: 0.9rem;
 
-    background:
-        #080A10;
+    transition: all .3s ease;
+
+    text-decoration: none;
+
+    width: fit-content;
 }
 
 
-.project-preview iframe {
+.project-preview:hover {
 
-    width: 100%;
+    background: var(--primary-dark);
 
-    height: 100%;
-
-    border: 0;
-
-    background:
-        white;
-}
-
-
-.preview-overlay {
-
-    position: absolute;
-
-    inset: 0;
-
-    display: flex;
-
-    align-items: center;
-
-    justify-content: center;
-
-    background:
-        rgba(230,36,41,0);
-
-    color:
-        white;
-
-    opacity: 0;
-
-    transition:
-        .3s ease;
-}
-
-
-.project-preview:hover
-.preview-overlay {
-
-    opacity: 1;
-
-    background:
-        rgba(230,36,41,.15);
+    transform: translateX(5px);
 }
 
 
 /* =========================================================
-   EDUCATION
+   EDUCATION SECTION
    ========================================================= */
 
 .edu-card-genz {
-
-    max-width: 1000px;
-
-    margin-top: 40px;
 
     display: flex;
 
@@ -1550,53 +1405,27 @@ section {
 
     align-items: center;
 
-    background:
-        var(--card-bg);
+    max-width: 800px;
 
-    border:
-        1px solid var(--card-border);
+    margin: 0 auto;
 
-    border-radius: 24px;
+    padding: 40px;
 
-    padding: 35px;
+    background: var(--card-bg);
 
-    backdrop-filter:
-        blur(12px);
+    border: 1px solid var(--card-border);
 
-    transition:
-        border-color .3s ease,
-        transform .3s ease;
-}
+    border-radius: 20px;
 
-
-.edu-card-genz:hover {
-
-    border-color:
-        var(--primary);
-
-    transform:
-        translateY(-4px);
+    backdrop-filter: blur(10px);
 }
 
 
 .edu-icon {
 
-    width: 75px;
+    width: 80px;
 
-    height: 75px;
-
-    border-radius: 20px;
-
-    background:
-        linear-gradient(
-            135deg,
-            rgba(230,36,41,.14),
-            rgba(36,59,107,.20)
-        );
-
-    border:
-        1px solid
-        rgba(230,36,41,.28);
+    height: 80px;
 
     display: flex;
 
@@ -1604,64 +1433,70 @@ section {
 
     justify-content: center;
 
-    font-size: 2rem;
+    border-radius: 16px;
 
-    color:
-        var(--accent-steel);
+    background: rgba(230,36,41,.12);
 
     flex-shrink: 0;
-}
 
+    font-size: 2.5rem;
 
-.edu-year {
-
-    font-size: .75rem;
-
-    font-weight: 800;
-
-    color:
-        var(--primary);
-
-    text-transform: uppercase;
-
-    letter-spacing: 1px;
+    color: var(--primary);
 }
 
 
 .edu-details h3 {
 
-    font-size: 1.4rem;
+    font-size: 1.5rem;
 
-    margin: 4px 0;
+    color: var(--text-main);
+
+    margin-bottom: 8px;
+}
+
+
+.edu-year {
+
+    display: block;
+
+    color: var(--primary);
+
+    font-weight: 700;
+
+    font-size: 0.9rem;
+
+    text-transform: uppercase;
+
+    letter-spacing: 1px;
+
+    margin-bottom: 8px;
 }
 
 
 .edu-major {
 
-    color:
-        var(--accent-steel);
+    color: var(--accent-steel);
+
+    font-size: 1rem;
+
+    margin-bottom: 12px;
 
     font-weight: 600;
-
-    font-size: .95rem;
-
-    margin-bottom: 10px;
 }
 
 
 .edu-desc {
 
-    color:
-        var(--text-muted);
+    color: var(--text-muted);
 
-    font-size: .9rem;
+    line-height: 1.7;
 
-    line-height: 1.6;
+    font-size: 0.95rem;
 }
 
 
 /* =========================================================
-   CONTACT
+   CONTACT SECTION
    ========================================================= */
 
 .contact-card-genz {
@@ -1670,52 +1505,43 @@ section {
 
     margin: 0 auto;
 
+    padding: 50px;
+
+    background: linear-gradient(135deg,
+        rgba(230, 36, 41, 0.08),
+        rgba(36, 59, 107, 0.08));
+
+    border: 1px solid var(--card-border);
+
+    border-radius: 20px;
+
     text-align: center;
 
-    background:
-        linear-gradient(
-            135deg,
-            rgba(36,59,107,.20),
-            rgba(230,36,41,.09)
-        );
-
-    border:
-        1px solid
-        rgba(230,36,41,.25);
-
-    border-radius: 30px;
-
-    padding: 50px 30px;
-
-    backdrop-filter:
-        blur(14px);
+    backdrop-filter: blur(10px);
 }
 
 
 .contact-card-genz h2 {
 
-    font-size: 2rem;
+    font-size: clamp(1.8rem, 3vw, 2.5rem);
 
-    margin-bottom: 12px;
+    margin-bottom: 16px;
+
+    color: var(--text-main);
 }
 
 
 .contact-card-genz p {
 
-    color:
-        var(--text-muted);
-
-    margin-bottom: 28px;
+    color: var(--text-muted);
 
     font-size: 1rem;
 
     line-height: 1.7;
+
+    margin-bottom: 30px;
 }
 
-
-/* =========================================================
-   BUTTON
-   ========================================================= */
 
 .action-btn {
 
@@ -1723,49 +1549,43 @@ section {
 
     align-items: center;
 
-    justify-content: center;
-
     gap: 10px;
 
-    padding:
-        13px 23px;
+    padding: 14px 32px;
 
-    border-radius: 8px;
-
-    font-size: .8rem;
+    border-radius: 12px;
 
     font-weight: 700;
 
-    transition:
-        .3s ease;
+    font-size: 1rem;
+
+    text-decoration: none;
+
+    transition: all .3s ease;
+
+    border: none;
+
+    cursor: pointer;
 }
 
 
 .primary-btn {
 
-    background:
-        var(--primary);
+    background: var(--primary);
 
-    color:
-        #FFFFFF;
+    color: white;
 
-    box-shadow:
-        0 8px 20px
-        rgba(230,36,41,.18);
+    box-shadow: 0 8px 24px rgba(230,36,41,.25);
 }
 
 
 .primary-btn:hover {
 
-    background:
-        var(--primary-dark);
+    background: var(--primary-dark);
 
-    transform:
-        translateY(-3px);
+    transform: translateY(-3px);
 
-    box-shadow:
-        0 12px 28px
-        rgba(230,36,41,.28);
+    box-shadow: 0 12px 32px rgba(230,36,41,.35);
 }
 
 
@@ -1775,389 +1595,515 @@ section {
 
 footer {
 
+    padding: 40px 10%;
+
     text-align: center;
 
-    padding: 35px;
+    color: var(--text-muted);
 
-    color:
-        var(--text-muted);
+    border-top: 1px solid var(--card-border);
 
-    font-size: .85rem;
-
-    border-top:
-        1px solid
-        rgba(255,255,255,.04);
+    font-size: 0.9rem;
 }
 
 
 /* =========================================================
-   TABLET
+   RESPONSIVE DESIGN - TABLET (768px)
    ========================================================= */
 
-@media (max-width: 900px) {
+@media (max-width: 768px) {
 
     section {
-
-        padding:
-            50px 6%;
+        padding: 60px 5%;
     }
 
-
-    .navbar {
-
-        padding:
-            14px 6%;
+    .nav-container {
+        gap: 15px;
     }
 
-
-    .navbar.scrolled {
-
-        padding:
-            12px 6%;
+    .nav-logo {
+        font-size: 1.1rem;
     }
-
 
     .nav-links {
-
         position: fixed;
-
-        top: 0;
-
+        top: 70px;
+        left: 0;
         right: 0;
-
-        height: 100vh;
-
-        width:
-            min(78vw, 320px);
-
-        margin: 0;
-
         flex-direction: column;
-
-        justify-content: center;
-
-        gap: 28px;
-
-        background:
-            rgba(7,9,15,.97);
-
-        backdrop-filter:
-            blur(18px);
-
-        border-left:
-            1px solid
-            rgba(230,36,41,.20);
-
-        transform:
-            translateX(100%);
-
-        transition:
-            transform .35s ease;
+        gap: 0;
+        background: rgba(7, 9, 15, 0.98);
+        backdrop-filter: blur(20px);
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height .3s ease;
+        align-items: stretch;
+        border-bottom: 1px solid var(--card-border);
     }
-
 
     .nav-links.open {
-
-        transform:
-            translateX(0);
+        max-height: 400px;
     }
-
 
     .nav-link {
-
-        font-size:
-            1.05rem;
+        padding: 14px 20px;
+        border-bottom: 1px solid rgba(255,255,255,.05);
+        font-size: 0.95rem;
     }
 
-
-    .nav-cta {
-
+    .nav-link::after {
         display: none;
     }
 
+    .nav-link.active {
+        background: rgba(230,36,41,.08);
+    }
 
     .nav-toggle {
-
         display: flex;
     }
 
+    .nav-cta {
+        display: none;
+    }
 
+    /* Hero Section */
     .hero-split {
-
         grid-template-columns: 1fr;
-
         min-height: auto;
     }
 
-
     .hero-split-left {
-
-        padding:
-            120px 6% 40px;
-
-        text-align: center;
-
-        align-items: center;
+        padding: 100px 5% 50px 5%;
+        min-height: 70vh;
     }
-
 
     .hero-ghost-text {
-
-        display: none;
+        position: relative;
+        top: auto;
+        left: auto;
+        font-size: clamp(3rem, 10vw, 5rem);
+        margin-bottom: 20px;
     }
-
-
-    .hero-desc {
-
-        margin:
-            0 auto 26px;
-    }
-
-
-    .hero-social {
-
-        justify-content:
-            center;
-    }
-
-
-    .hero-nav-btns {
-
-        justify-content:
-            center;
-    }
-
 
     .hero-split-right {
-
-        height: 320px;
-
-        min-height: 320px;
-    }
-
-
-    .hero-photo-slot {
-
-        width: 60%;
-    }
-
-
-    .hero-side-strip {
-
         display: none;
     }
 
+    .hero-photo-slot {
+        width: 90%;
+        aspect-ratio: 3 / 4;
+    }
 
+    .hero-nav-btns {
+        justify-content: center;
+        gap: 15px;
+    }
+
+    .hero-nav-btn {
+        width: 50px;
+        height: 50px;
+    }
+
+    .hero-desc {
+        max-width: 100%;
+    }
+
+    .hero-social {
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    /* Arsenal Grid */
     .arsenal-grid {
-
         grid-template-columns: 1fr;
+        gap: 16px;
     }
 
+    .arsenal-card {
+        padding: 20px;
+    }
 
+    .arsenal-icon {
+        width: 48px;
+        height: 48px;
+        font-size: 1.5rem;
+    }
+
+    .arsenal-header h3 {
+        font-size: 1.1rem;
+    }
+
+    .arsenal-card p {
+        font-size: 0.9rem;
+    }
+
+    /* Bento Grid */
     .bento-grid {
-
         grid-template-columns: 1fr;
     }
-
 
     .bento-large,
     .bento-medium,
     .bento-small {
-
-        grid-column:
-            span 1;
-
-        flex-direction:
-            column;
+        grid-column: span 1;
+        min-height: 280px;
     }
 
-
-    .project-card {
-
-        padding:
-            22px;
+    .bento-content {
+        padding: 20px;
     }
 
-
-    .bento-large
-    .project-preview,
-
-    .bento-medium
-    .project-preview,
-
-    .bento-small
-    .project-preview {
-
-        width: 100%;
-
-        height: 170px;
-
-        margin:
-            18px 0 0;
+    .bento-item h3 {
+        font-size: 1.3rem;
     }
 
-
+    /* Education Card */
     .edu-card-genz {
-
-        flex-direction:
-            column;
-
-        text-align:
-            center;
-
+        flex-direction: column;
         gap: 20px;
+        padding: 30px 20px;
+        text-align: center;
     }
-
-}
-
-
-/* =========================================================
-   MOBILE
-   ========================================================= */
-
-@media (max-width: 600px) {
-
-    section {
-
-        padding:
-            45px 5.5%;
-    }
-
-
-    #home,
-    .hero-split {
-
-        padding-top: 0;
-    }
-
-
-    .hero-split-left {
-
-        padding:
-            100px 5.5% 30px;
-    }
-
-
-    .hero-name {
-
-        font-size:
-            2.1rem;
-    }
-
-
-    .hero-desc p {
-
-        font-size:
-            .92rem;
-    }
-
-
-    .hero-split-right {
-
-        height:
-            260px;
-    }
-
-
-    .section-title {
-
-        font-size:
-            1.8rem;
-    }
-
-
-    .section-subtitle {
-
-        font-size:
-            .92rem;
-
-        margin-bottom:
-            35px;
-    }
-
-
-    .arsenal-card {
-
-        padding:
-            22px;
-    }
-
-
-    .bento-item,
-    .project-card {
-
-        padding:
-            20px;
-    }
-
-
-    .bento-content h3 {
-
-        font-size:
-            1.15rem;
-    }
-
-
-    .edu-card-genz {
-
-        padding:
-            26px 20px;
-    }
-
 
     .edu-icon {
-
-        width:
-            60px;
-
-        height:
-            60px;
-
-        font-size:
-            1.6rem;
+        width: 70px;
+        height: 70px;
+        font-size: 2rem;
     }
 
-
+    /* Contact Card */
     .contact-card-genz {
-
-        padding:
-            38px 22px;
+        padding: 30px 20px;
     }
-
 
     .contact-card-genz h2 {
+        font-size: 1.8rem;
+    }
 
-        font-size:
-            1.5rem;
+    .action-btn {
+        padding: 12px 24px;
+        font-size: 0.95rem;
+    }
+
+    footer {
+        padding: 30px 5%;
+    }
+}
+
+
+/* =========================================================
+   RESPONSIVE DESIGN - MOBILE (480px)
+   ========================================================= */
+
+@media (max-width: 480px) {
+
+    :root {
+        font-size: 14px;
+    }
+
+    section {
+        padding: 40px 3%;
+    }
+
+    /* Navbar Mobile */
+    .navbar {
+        padding: 12px 3%;
+    }
+
+    .navbar.scrolled {
+        padding: 10px 3%;
+    }
+
+    .nav-container {
+        gap: 8px;
+    }
+
+    .nav-logo {
+        font-size: 1rem;
+    }
+
+    .nav-links {
+        top: 50px;
+    }
+
+    .nav-link {
+        padding: 12px 15px;
+        font-size: 0.9rem;
+    }
+
+    /* Blob animations - hide on mobile */
+    .blob {
+        opacity: 0.08;
+    }
+
+    .blob-3 {
+        display: none;
+    }
+
+    /* Hero Section */
+    .hero-split-left {
+        padding: 80px 3% 30px 3%;
+        min-height: 60vh;
+    }
+
+    .hero-eyebrow {
+        font-size: 0.9rem;
+        letter-spacing: 2px;
+    }
+
+    .hero-ghost-text {
+        font-size: clamp(2rem, 8vw, 3.5rem);
+        margin-bottom: 15px;
+    }
+
+    .hero-breadcrumb {
+        font-size: 0.7rem;
+        margin-bottom: 10px;
+    }
+
+    .hero-name {
+        font-size: clamp(2rem, 5vw, 3rem);
+    }
+
+    .hero-name::after {
+        width: 50px;
+        height: 4px;
+        margin-top: 15px;
+    }
+
+    .hero-desc {
+        margin-top: 20px;
+    }
+
+    .hero-desc p {
+        font-size: 0.85rem;
+        margin-bottom: 5px;
+    }
+
+    .hero-social {
+        gap: 8px;
+        margin-top: 15px;
+    }
+
+    .hero-social a {
+        width: 38px;
+        height: 38px;
+        font-size: 1rem;
+    }
+
+    .hero-nav-btns {
+        margin-top: 20px;
+        gap: 8px;
+    }
+
+    .hero-nav-btn {
+        width: 40px;
+        height: 40px;
+        font-size: 0.9rem;
+    }
+
+    .hero-side-strip {
+        display: none;
+    }
+
+    /* Section Titles */
+    .section-title {
+        font-size: clamp(1.5rem, 4vw, 2rem);
+        margin-bottom: 15px;
+    }
+
+    .section-subtitle {
+        font-size: clamp(0.85rem, 1.5vw, 0.95rem);
+        margin-bottom: 30px;
+    }
+
+    /* Arsenal Grid */
+    .arsenal-grid {
+        grid-template-columns: 1fr;
+        gap: 12px;
+    }
+
+    .arsenal-card {
+        padding: 16px;
+        border-radius: 12px;
+    }
+
+    .arsenal-header {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 12px;
+    }
+
+    .arsenal-icon {
+        width: 44px;
+        height: 44px;
+        font-size: 1.3rem;
+    }
+
+    .arsenal-header h3 {
+        font-size: 1rem;
+    }
+
+    .arsenal-card p {
+        font-size: 0.85rem;
+        line-height: 1.5;
+    }
+
+    /* Bento Grid */
+    .bento-grid {
+        grid-template-columns: 1fr;
+        gap: 12px;
+    }
+
+    .bento-item {
+        min-height: 240px;
+        border-radius: 12px;
+    }
+
+    .bento-content {
+        padding: 16px;
+    }
+
+    .bento-tag {
+        font-size: 0.7rem;
+        margin-bottom: 8px;
+    }
+
+    .bento-item h3 {
+        font-size: 1.1rem;
+        margin-bottom: 8px;
+    }
+
+    .bento-item p {
+        font-size: 0.8rem;
+        margin-bottom: 12px;
+    }
+
+    .project-preview {
+        padding: 8px 16px;
+        font-size: 0.8rem;
+    }
+
+    /* Education Card */
+    .edu-card-genz {
+        padding: 20px 15px;
+        gap: 15px;
+        border-radius: 16px;
+    }
+
+    .edu-icon {
+        width: 60px;
+        height: 60px;
+        font-size: 1.8rem;
+    }
+
+    .edu-details h3 {
+        font-size: 1.2rem;
+    }
+
+    .edu-year {
+        font-size: 0.8rem;
+    }
+
+    .edu-major {
+        font-size: 0.9rem;
+    }
+
+    .edu-desc {
+        font-size: 0.85rem;
+    }
+
+    /* Contact Card */
+    .contact-card-genz {
+        padding: 20px 15px;
+        border-radius: 16px;
+    }
+
+    .contact-card-genz h2 {
+        font-size: 1.4rem;
+        margin-bottom: 12px;
+    }
+
+    .contact-card-genz p {
+        font-size: 0.9rem;
+        margin-bottom: 20px;
+    }
+
+    .action-btn {
+        padding: 10px 20px;
+        font-size: 0.85rem;
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .primary-btn {
+        display: flex;
+        justify-content: center;
+    }
+
+    /* Footer */
+    footer {
+        padding: 20px 3%;
+        font-size: 0.85rem;
     }
 
 }
 
 
 /* =========================================================
-   VERY SMALL PHONE
+   EXTRA SMALL DEVICES (320px)
    ========================================================= */
 
-@media (max-width: 380px) {
+@media (max-width: 320px) {
+
+    section {
+        padding: 30px 2%;
+    }
+
+    .hero-split-left {
+        padding: 60px 2% 20px 2%;
+        min-height: 55vh;
+    }
+
+    .hero-ghost-text {
+        font-size: clamp(1.5rem, 6vw, 2.5rem);
+        margin-bottom: 10px;
+    }
 
     .hero-name {
-
-        font-size:
-            1.85rem;
+        font-size: clamp(1.5rem, 4vw, 2.5rem);
     }
 
-
-    .hero-split-right {
-
-        height:
-            220px;
+    .section-title {
+        font-size: clamp(1.2rem, 3vw, 1.5rem);
     }
 
+    .arsenal-card {
+        padding: 12px;
+    }
 
-    .hero-nav-btns {
+    .arsenal-header {
+        gap: 8px;
+    }
 
-        gap:
-            10px;
+    .arsenal-icon {
+        width: 40px;
+        height: 40px;
+        font-size: 1.2rem;
+    }
+
+    .bento-item {
+        min-height: 200px;
+    }
+
+    .edu-card-genz {
+        padding: 15px 10px;
+    }
+
+    .contact-card-genz {
+        padding: 15px 10px;
     }
 
 }
